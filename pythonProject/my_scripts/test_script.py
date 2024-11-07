@@ -1,5 +1,6 @@
 import sys
 import os
+import logging
 
 # Přidání cesty k src do sys.path
 src_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src'))
@@ -11,6 +12,8 @@ from src.confest import *
 
 def test_1_google_to_morosystem(browser):
     print("0.1 - Otevření browseru a URL google.com")
+
+    logging.info("Test začíná.")
 
     try:
         open_google_page(browser=browser, url="https://www.google.com/")
@@ -34,4 +37,5 @@ def test_1_google_to_morosystem(browser):
         print("Něcose nepovedlo?")
 
     finally:
+        logging.info("Test dokončen.")
         tear_down(browser=browser)
