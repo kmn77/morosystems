@@ -1,4 +1,5 @@
-from src.confest import *
+from morosystems.pythonProject.src.confest import *
+
 
 def test_1_google_to_morosystem(browser):
     print("0.1 - Otevření browseru a URL google.com")
